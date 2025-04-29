@@ -9,7 +9,7 @@ import com.banking.service.AccountService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+
 public class AccountController {
 
     @Autowired
@@ -46,7 +46,7 @@ class TransferRequest {
     private Long fromAccountnumber;
     private Long toAccountnumber;
     private Double amount;
-    // Getters and Setters
+    
 	public Long getFromAccountnumber() {
 		return fromAccountnumber;
 	}
@@ -73,7 +73,6 @@ class TransferRequest {
 	}
 	public TransferRequest() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
     
 }

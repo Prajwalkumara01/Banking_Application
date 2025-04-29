@@ -8,7 +8,6 @@ import jakarta.persistence.Id;
 @Entity
 public class User {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;
@@ -38,9 +37,7 @@ public class User {
 	}
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-    // Getters and Setters
     
 }

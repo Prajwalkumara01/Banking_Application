@@ -8,10 +8,9 @@ import jakarta.persistence.Id;
 @Entity
 public class Account {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long userId;
-    private Long useraccountnumber;   // ✅ Make accountnumber as ID
+    private Long useraccountnumber;   
     private Double balance;
 	public Long getUserId() {
 		return userId;
@@ -39,10 +38,8 @@ public class Account {
 	}
 	public Account() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-    // Getters and Setters
     
     
 }

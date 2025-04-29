@@ -1,32 +1,5 @@
 const BASE_URL = "http://localhost:8080/api"; // Your backend API URL
 
-// Login function
-async function login(username, password) {
-  try {
-    const response = await fetch(`${BASE_URL}/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({username, password })
-    });
-
-    if (response.ok) {
-      localStorage.setItem("loggedIn", "true");
-      window.location.href = "dashboard.html";  // Redirect to dashboard after login
-    } else {
-      const errorData = await response.json();
-      console.error("Login failed:", errorData);
-      alert("Login failed: " + errorData.message);
-    }
-  } catch (error) {
-    console.error("Error during login:", error);
-  }
-}
-
-// Logout function
-function logout() {
-  localStorage.removeItem("loggedIn");
-  window.location.href = "index.html"; // Redirect to login page
-}
 
 // Create account function
 async function createAccount(userId,useraccountnumber, balance) {
@@ -155,16 +128,7 @@ async function getBalance() {
 
 // Form event listeners
 document.addEventListener("DOMContentLoaded", function() {
-  // Login form submission
-  const loginForm = document.getElementById("loginForm");
-  if (loginForm) {
-    loginForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      login(username, password);
-    });
-  }
+ 
 
 
 });

@@ -8,7 +8,7 @@ import com.banking.service.UserService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+
 public class AuthController {
 
     @Autowired
@@ -29,7 +29,7 @@ public class AuthController {
 class UserLoginRequest {
     private String username;
     private String password;
-    // Getters and Setters
+    
 	public String getUsername() {
 		return username;
 	}
@@ -49,7 +49,6 @@ class UserLoginRequest {
 	}
 	public UserLoginRequest() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
     
 }

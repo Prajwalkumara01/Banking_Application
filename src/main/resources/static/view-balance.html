@@ -4,10 +4,54 @@
   <meta charset="UTF-8">
   <title>View Balance</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #74ebd5, #acb6e5); /* soft blue background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #4caf50;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #balanceResult {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #222;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <h1>View Account Balance</h1>
-  <input type="text" id="useraccountnumber" placeholder="User Account Number">required <br>
+  <input type="text" id="useraccountnumber" placeholder="User Account Number" required><br><br>
   <button onclick="getBalance()">Check Balance</button>
 
   <div id="balanceResult"></div>

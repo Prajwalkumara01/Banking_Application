@@ -56,7 +56,6 @@ public class AccountService {
         accountRepository.save(from);
         accountRepository.save(to);
 
-        // ✅ Save Transaction History
         Transaction transaction = new Transaction();
         transaction.setFromAccountnumber(fromAccountnumber);
         transaction.setToAccountnumber(toAccountnumber);
